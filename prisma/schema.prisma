@@ -36,6 +36,7 @@ model User {
 
   Wallet             Wallet[]
   LiquidationAddress LiquidationAddress[]
+  Card               Card?
 
   @@map("users")
 }
@@ -73,4 +74,20 @@ model LiquidationAddress {
   updatedAt DateTime @updatedAt
 
   @@map("addresses")
+}
+
+model Card {
+  id          String @id @default(cuid())
+  cardNumber  String @unique
+  expiryMonth Int
+  expiryYear  Int
+  cvv         String
+
+  usdcBalance Float @default(0)
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

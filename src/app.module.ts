@@ -9,6 +9,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { BridgeModule } from './bridge/bridge.module';
+import { CardModule } from './card/card.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { BridgeModule } from './bridge/bridge.module';
     KycModule,
     UserModule,
     BridgeModule,
+    CardModule,
   ],
   controllers: [AppController],
   providers: [AppService],
