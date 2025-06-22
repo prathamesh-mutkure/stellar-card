@@ -34,5 +34,43 @@ model User {
 
   bridgeCustomerId String? @unique
 
+  Wallet             Wallet[]
+  LiquidationAddress LiquidationAddress[]
+
   @@map("users")
+}
+
+model Wallet {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  bridgeWalletId String @unique
+  chain          String // stellar, ethereum, solana, etc.
+  address        String // wallet address
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("wallets")
+}
+
+model LiquidationAddress {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  bridgeId                 String  @unique
+  chain                    String // stellar, ethereum, solana, etc.
+  address                  String // wallet address
+  currency                 String // currency type (e.g., usdc, usdt)
+  destination_payment_rail String // e.g., stellar, ethereum, solana
+  destination_address      String // destination address for the liquidation
+  destination_currency     String // destination currency type (e.g., usdc, usdt)
+  blockchain_memo          String? // optional memo for blockchain transactions
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("addresses")
 }

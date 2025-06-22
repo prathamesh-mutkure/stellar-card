@@ -8,6 +8,7 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
+import { BridgeModule } from './bridge/bridge.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { ConfigModule } from '@nestjs/config';
     AuthModule,
     KycModule,
     UserModule,
+    BridgeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
