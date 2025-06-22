@@ -56,6 +56,7 @@ export class UserService {
           isVerified:
             kycData.kyc_status === 'approved' &&
             kycData.tos_status === 'approved',
+          bridgeCustomerId: kycData.customer_id,
         },
       });
 

@@ -32,5 +32,7 @@ model User {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
+  bridgeCustomerId String? @unique
+
   @@map("users")
 }
