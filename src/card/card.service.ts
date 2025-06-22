@@ -6,7 +6,15 @@ import { PrismaService } from 'nestjs-prisma';
 export class CardService {
   constructor(private readonly prisma: PrismaService) {}
 
-  create(userId: string) {
+  async create(userId: string) {
+    const cardExists = await this.prisma.card.findUnique({
+      where: { userId },
+    });
+
+    if (cardExists) {
+      return cardExists;
+    }
+
     const cardNumber = this.generateCardNumber();
     const expiryMonth = faker.number.int({ min: 1, max: 12 });
     const expiryYear =
