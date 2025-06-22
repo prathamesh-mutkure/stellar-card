@@ -2,6 +2,9 @@
 
 A comprehensive digital wallet solution that bridges cryptocurrency and traditional payments by allowing users to deposit USDC on Stellar and receive a physical/virtual credit card for worldwide use.
 
+<img width="1624" alt="Screenshot 2025-06-22 at 15 49 49" src="https://github.com/user-attachments/assets/77267299-eea2-4fb3-8b96-9138f472b810" />
+
+
 ## 🌟 Features
 
 ### Core Functionality
