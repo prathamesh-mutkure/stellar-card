@@ -1,99 +1,69 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Stellar Wallet & Credit Card Platform
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A comprehensive digital wallet solution that bridges cryptocurrency and traditional payments by allowing users to deposit USDC on Stellar and receive a physical/virtual credit card for worldwide use.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🌟 Features
 
-## Description
+### Core Functionality
+- **Digital Wallet**: Secure USDC deposits on the Stellar network
+- **Credit Card Issuance**: Automatic credit card generation linked to wallet balance
+- **Mobile Pay Integration**: Add issued cards directly to Apple Pay and Google Pay
+- **Global Acceptance**: Cards work worldwide through Visa/Mastercard networks
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### User Experience
+- **Simple Onboarding**: Streamlined signup process with integrated KYC
+- **Freighter Integration**: Seamless wallet connection for crypto deposits
+- **Real-time Balance**: Instant updates between wallet and card spending
+- **Cross-platform**: Web application with mobile-optimized design
 
-## Project setup
+## 🔧 Technology Stack
 
-```bash
-$ pnpm install
-```
+### Backend
+- **NestJS**: Robust Node.js framework for scalable server-side applications
+- **Stellar SDK**: Integration with Stellar blockchain for USDC transactions
+- **PostgreSQL/MongoDB**: Secure data storage for user accounts and transactions
 
-## Compile and run the project
+### Frontend
+- **Vite**: Lightning-fast build tool and development server
+- **React**: Modern UI library for responsive user interfaces
+- **TypeScript**: Type-safe development for better code quality
 
-```bash
-# development
-$ pnpm run start
+### Integrations
+- **Freighter Wallet**: Browser extension wallet for Stellar transactions
+- **Bridge/Plaid**: Worldwide KYC and identity verification services
+- **Card Networks**: Visa and Mastercard payment processing
+- **Apple/Google Pay**: Mobile wallet integration APIs
 
-# watch mode
-$ pnpm run start:dev
+## 🌍 Global Capabilities
 
-# production mode
-$ pnpm run start:prod
-```
+### KYC & Compliance
+- **Worldwide Support**: KYC verification available in 100+ countries through Bridge and Plaid
+- **Regulatory Compliance**: Meets international financial regulations
+- **Identity Verification**: Multi-layer verification including document and biometric checks
 
-## Run tests
+### Payment Network
+- **Visa/Mastercard**: Cards issued on major payment networks
+- **Global Acceptance**: Works at millions of merchants worldwide
+- **Online & Offline**: Support for both e-commerce and point-of-sale transactions
+- **ATM Access**: Cash withdrawal capabilities at supported ATMs
 
-```bash
-# unit tests
-$ pnpm run test
+### Mobile Integration
+- **Apple Pay**: Native integration with iOS devices and Apple Watch
+- **Google Pay**: Seamless Android device compatibility
+- **Contactless Payments**: NFC-enabled transactions for enhanced security
+- **Digital Wallet Management**: Full card control through mobile apps
 
-# e2e tests
-$ pnpm run test:e2e
 
-# test coverage
-$ pnpm run test:cov
-```
+## 📱 User Journey
 
-## Deployment
+1. **Sign Up**: Create account with email and basic information
+2. **KYC Verification**: Complete identity verification through Bridge/Plaid
+3. **Wallet Setup**: Connect Freighter wallet or create new Stellar account
+4. **Deposit USDC**: Transfer USDC to your Stellar wallet address
+5. **Card Issuance**: Automatically receive virtual/physical credit card
+6. **Mobile Setup**: Add card to Apple Pay or Google Pay
+7. **Start Spending**: Use card worldwide or through mobile payments
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+----
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ pnpm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+**Built with ❤️ using Stellar, NestJS, and React**
