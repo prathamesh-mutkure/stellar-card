@@ -1,7 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { KycService } from '../kyc/kyc.service';
 import { PrismaService } from 'nestjs-prisma';
-import e from 'express';
 
 @Injectable()
 export class UserService {

@@ -7,10 +7,14 @@ import { UserModule } from './user/user.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
     PrismaModule.forRoot({
+      isGlobal: true,
+    }),
+    ConfigModule.forRoot({
       isGlobal: true,
     }),
     PassportModule,

@@ -53,6 +53,24 @@ export class KycService {
 
       return response.data;
     } catch (error) {
+      if (
+        error instanceof AxiosError &&
+        error.response?.data?.code === 'duplicate_record'
+      ) {
+        const existingData = error.response.data
+          ?.existing_kyc_link as KycStatusResponse & {
+          rejection_reasons: string[];
+          full_name: string;
+          persona_inquiry_type: string;
+        };
+
+        const newData: CreateKycLinkResponse = {
+          ...existingData,
+        };
+
+        return newData;
+      }
+
       console.error(
         'Bridge API Error:',
         (error as AxiosError).response?.data || (error as Error).message,
